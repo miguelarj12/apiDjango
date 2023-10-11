@@ -25,7 +25,23 @@ class acciones_Usuario(APIView):
     def post(self, request):
         data = request.data
         new_User = registros(nombre = data.get('nombre'), edad = data.get('edad'), correo = data.get('correo'), telefono = data.get('telefono'), contrasena = data.get('contrasena'))
-        new_User.save()
-        print(request.data)
-        return Response({'msg': 'Usuario registrado'}, status=status.HTTP_201_CREATED)
+       try:
+            subject = 'Registro exitoso en Mi Aplicación'
+            message = f'Hola {nombre}, ¡tu registro en Mi Aplicación ha sido exitoso!, tus datos para iniciar sesion son: Nombre: {nombre} Contraseña: {contrasena}'
+            from_email = settings.EMAIL_HOST_USER
+            recipient_list = [correo]
+            new_User.save()
+      
+            send_mail(subject, message, from_email, recipient_list)
+            messages.success(request, 'Correo de confirmación enviado correctamente.')          
+            # return Response({'message': 'Correo de confirmación enviado correctamente'}, status=status.HTTP_201_CREATED)
+            return Response({'msg': 'Usuario registrado'}, status=status.HTTP_201_CREATED)
+             
+        except Exception as e:
+            messages.error(request, 'Error al enviar el correo de confirmación.')
+            return Response({'error': 'Error al enviar el correo de confirmación'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+      
+    
+            
+    
     

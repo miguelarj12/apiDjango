@@ -5,7 +5,7 @@ formulario.addEventListener('submit', function(evento){
 
     const datosFormulario = new FormData(evento.target)
     
-    fetch('http://127.0.0.1:8000/crear/', {
+    fetch('http://127.0.0.1:8000/registro/', {
         method: 'POST',
         body: datosFormulario
     })
