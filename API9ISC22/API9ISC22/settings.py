@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'API9ISC22.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'iscteschi_paqa',
+        'USER': 'miguel',
+        'PASSWORD': '4zRCSzYDyibJhmXbghX3J1FWIBShTLDQ',
+        'HOST': 'oregon-postgres.render.com',
+        'PORT': '5432',
     }
 }
 
@@ -132,3 +136,4 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'miguelrmzj12@gmail.com'
 EMAIL_HOST_PASSWORD = 'nsjm qfjp hpzr gzqb'
+

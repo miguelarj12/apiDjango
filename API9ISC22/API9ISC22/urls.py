@@ -16,10 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from api.views import Home, Inicio, Registro
+from api import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Home.as_view(), name='index'),
     path('inicio/', Inicio.as_view(), name='inicio'),
     path('registro/', Registro.as_view(), name='registro'),
+    path('report/', views.report, name='report'),
+    path('get_respuesta/', views.get_respuesta, name='get_respuesta'),
 ]
+

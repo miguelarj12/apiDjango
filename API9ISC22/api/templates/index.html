@@ -7,49 +7,53 @@
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
-<body style="background-color: rgb(152, 189, 190);">
-    <section class="vh-100">
-        <div class="container py-5 h-100">
-          <div class="row d-flex align-items-center justify-content-center h-100">
-            <div class="col-md-8 col-lg-7 col-xl-6">
-              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
-                class="img-fluid" alt="Phone image">
-            </div>
-            <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1" style="background-color: white; border-radius: 20px;">
-              <h1 class="d-flex justify-content-around align-items-center" style="margin-top: 20px;">Ingresa tus datos</h1>
-              <br>
-              <form>
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                  <input type="text" class="form-control mb-4 shadow bg-body rounded" name="txt_User" placeholder="Usuario">
-                </div>
+<body>
+    <section class="vh-100" style="background-color: #3b5998;">
+        <div class="container py-3 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10">
+              <div class="card">
+                <div class="row g-0">
+                  <div class="col-md-6 col-lg-5 d-none d-md-block">
+                    <img src="https://static.vecteezy.com/system/resources/previews/016/283/773/non_2x/cartoon-style-geography-globe-vector.jpg"
+                      alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+                  </div>
+                  <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                    <div class="card-body p-4 p-lg-5 text-black">
       
-                <!-- Password input -->
-                <div class="form-outline mb-4">
-                  <input type="password" class="form-control mb-4 shadow bg-body rounded" name="txt_Pass" placeholder="Contraseña">
-                </div>
+                      <form>
       
-                <div class="d-flex justify-content-around align-items-center mb-4">
-                  <a href="/inicio">¿Has olvidado tu contraseña?</a>
-                </div>
+                        <div class="d-flex justify-content-center align-items-center mb-3 pb-1">
+                          <i class="fas fa-cubes fa-2x me-3 " style="color: #ff6219;"></i>
+                          <span class="h1 fw-bold mb-0">GeoBot</span>
+                        </div>
       
-                <!-- Submit button -->
-                <div class="d-flex justify-content-around align-items-center mb-4">
-                  <a href="/inicio" class="btn btn-primary btn-lg btn-block justify-content-center align-items-center mt-4" style="background-color: rgb(60, 80, 145)" href="/"
-                  role="button">
-                  <i class="fab fa-google me-2"></i>Ingresar
-                </a>
+                        <h5 class="fw-normal mb-2 pb-2 d-flex justify-content-center align-items-center" style="letter-spacing: 1px;">Ingresa tus datos</h5>
+      
+                        <div class="form-outline mb-3">
+                          <input type="text" placeholder="Usuario" id="form2Example17" class="form-control form-control-lg" />
+                        </div>
+      
+                        <div class="form-outline mb-3">
+                          <input type="password" placeholder="Contraseña" id="form2Example27" class="form-control form-control-lg" />
+                        </div>
+      
+                        <div class="d-flex justify-content-around align-items-center mb-2">
+                            <a href="/inicio" class="btn  float-end" style="background-color: #2d70b4; color: white">Ingresar</a>
+                        </div>
+                        <div class="d-flex justify-content-around align-items-center mb-2">  
+                          <a class="mb-1 pb-lg-2" style="color: #393f81;">Iniciar con Google</a>                      
+                          <a class="mb-1 pb-lg-2" style="color: #393f81;" href="/registro">Registrar usuario</a>
+                        </div>
+                        <div class="d-flex justify-content-around align-items-center mb-2">  
+                          <a class="small text-muted" href="#!">Olvide mi contraseña?</a>
+                        </div>
+                      </form>
+      
+                    </div>
+                  </div>
                 </div>
-                      <div class="d-flex justify-content-around align-items-center mb-4">
-                  <p class="text-center fw-bold mx-3 mb-0">O</p>
-                </div>
-
-                <a class="btn btn-primary btn-lg btn-block d-flex justify-content-center align-items-center" style="background-color: #3b5998" href="#!"
-                  role="button">
-                  <i class="fab fa-facebook-f me-2"></i>Ingresa con Google
-                </a>
-                <br>
-              </form>
+              </div>
             </div>
           </div>
         </div>
