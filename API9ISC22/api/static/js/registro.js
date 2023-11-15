@@ -5,7 +5,7 @@ formulario.addEventListener('submit', function(evento){
 
     const datosFormulario = new FormData(evento.target)
     
-    fetch('http://127.0.0.1:8000/registro/', {
+    fetch('https://geobot.onrender.com/registro/', {
         method: 'POST',
         body: datosFormulario
     })
