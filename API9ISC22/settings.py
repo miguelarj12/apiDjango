@@ -12,8 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import dj_database_url
-# Build path
-# s inside the project like this: BASE_DIR / 'subdir'.
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -22,8 +21,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-0+c63js!%24*e&bb31_o(g_6hv#dml&d0^-c@)3h@smpve*pvt'
-
-
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -82,14 +79,13 @@ WSGI_APPLICATION = 'API9ISC22.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'iscteschi_paqa',
-        'USER': 'miguel',
-        'PASSWORD': '4zRCSzYDyibJhmXbghX3J1FWIBShTLDQ',
-        'HOST': 'oregon-postgres.render.com',
-        'PORT': '5432',
+        'NAME': 'Geobot',
+        'USER': 'postgres',
+        'PASSWORD': 'miguel12',
+        'HOST': 'localhost',
+        'PORT': '5433',
     }
 }
-DATABASES['default'] = dj_database_url.parse('postgres://miguel:4zRCSzYDyibJhmXbghX3J1FWIBShTLDQ@dpg-ckus753amefc73cch840-a.oregon-postgres.render.com/iscteschi_paqa')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -127,7 +123,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'https://storage.cloud.google.com/geobot/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -141,3 +137,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'miguelrmzj12@gmail.com'
 EMAIL_HOST_PASSWORD = 'nsjm qfjp hpzr gzqb'
 
+DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+GS_BUCKET_NAME = 'geobot'

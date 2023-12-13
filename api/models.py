@@ -1,4 +1,11 @@
 from django.db import models
+from django.utils.translation import gettext as _
+from django.contrib.auth.models import AbstractUser, Group, Permission
+
+class User(AbstractUser):
+    # Agrega un related_name único para evitar conflictos
+    groups = models.ManyToManyField(Group, verbose_name=_('groups'), blank=True, related_name='api_user_groups')
+    user_permissions = models.ManyToManyField(Permission, verbose_name=_('user permissions'), blank=True, related_name='api_user_permissions')
 
 # Create your models here.
 class registros(models.Model): 

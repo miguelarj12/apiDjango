@@ -11,21 +11,18 @@
   <title>Home</title>
 </head>
 <body style="background-color: #3b5998;">
-    <div>
+    <div >
         <nav class="navbar navbar-dark bg-primary navbar-expand-lg justify-content-between">
-            <a class="navbar-brand" href="#">GeoBot</a>
+            <a class="navbar-brand bold font-size">EstudiBot</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Inicio</a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="/report">Dashboard</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item active dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
                     Funciones
                   </a>
@@ -36,10 +33,9 @@
                     <div class="dropdown-divider"></div>
                   </div>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="https://asistente-geografico.onrender.com">Asistente</a>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/perfil">Perfil</a>
               </li>
-              
               </ul>
               <form class="form-inline">
                 <input class="form-control mr-sm-1" type="search" placeholder="Buscar" aria-label="Search">
@@ -48,33 +44,39 @@
             </div>
         </nav>
     </div>
-    <div class="d-flex justify-content-center align-items-center" style="margin-top: 15px;">
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" style="border-radius: 40px;">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="https://humanidades.com/wp-content/uploads/2017/07/geografia-1-e1571191548230.jpg" alt="First slide">
-            <div class="carousel-caption d-md-block" style="background-color: white; border-radius: 100px;">
-              <h5 style="color: black; font-size: 25px;">BIENVENIDO AL SISTEMA</h5>
-              <p style="color: black; font-size: 15px;">Asistente geografico</p>
+    <div class="row row-cols-1 row-cols-md-3">
+      <div class="col">
+      <a href="/Geografia">
+          <div class="card h-90" style="width: 350px; margin: 15px;">
+            <img src="data:image/png;base64,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" class="card-img-top">
+            <div class="card-body" style="display: flex; justify-content: center; align-items: center;">
+              <h2 class="card-title">Geografia</h2>
             </div>
+          </a>
           </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="https://thumbs.dreamstime.com/b/mapa-del-mundo-de-la-geograf%C3%ADa-modificado-entonado-con-las-luces-ciudad-138360522.jpg" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block">
-              <h5 style="font-size: 40px;">Explorando el Mundo a Través de la Geografía</h5>
-              <p style=" font-size: 15px;">La geografía es mucho más que mapas y coordenadas; es una disciplina fascinante que nos permite entender nuestro mundo de una manera profunda y significativa. Esta ciencia se dedica a explorar y explicar la relación entre el ser humano y su entorno, así como a examinar la influencia que los factores naturales y humanos tienen en la configuración de la Tierra.</p>
+    </div>
+
+      <div class="col">
+        <a href="/registro">
+          <div class="card h-90" style="width: 350px; margin: 15px;">
+            <img src="https://cdn-icons-png.flaticon.com/512/2497/2497595.png" class="card-img-top">
+            <div class="card-body" style="display: flex; justify-content: center; align-items: center;">
+              <h2 class="card-title">Boiologia</h2>
             </div>
+          </a>
           </div>
-          <div class="carousel-item">
-            
-            <div class="carousel-caption d-none d-md-block">
-              <h5 style=" font-size: 40px;">La Geografía</h5>
-              <p style=" font-size: 15px;">La geografía nos brinda las herramientas para analizar cómo se distribuyen los recursos naturales, cómo evolucionan los paisajes a lo largo del tiempo, y cómo las personas interactúan con su entorno para dar forma a las culturas, las economías y las sociedades. Nos ayuda a comprender la importancia de la ubicación, la topografía, el clima, la población y muchos otros aspectos que afectan la vida en nuestro planeta.</p>
-            </div>
-            <img class="d-block w-100" src="https://thumbs.dreamstime.com/b/la-antigua-br%C3%BAjula-magn%C3%A9tica-de-cartograf%C3%ADa-mundial-viajes-geograf%C3%ADa-navegaci%C3%B3n-turismo-y-exploraci%C3%B3n-fondo-concepto-foto-182709448.jpg" alt="Third slide">
+    </div>
+
+      <div class="col">
+      <a href="/Matematicas">
+        <div class="card h-90" style="width: 350px; margin: 15px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/2084/2084541.png" class="card-img">
+          <div class="card-body" style="display: flex; justify-content: center; align-items: center;">
+            <h2 class="card-title">Matematicas</h2>
           </div>
+        </a>
         </div>
-      </div>
+  </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>

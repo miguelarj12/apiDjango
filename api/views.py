@@ -8,6 +8,34 @@ from rest_framework.response import Response
 from rest_framework import status
 from api.models import registros
 from .models import Respuesta
+from django.contrib.auth import authenticate, login
+from django.shortcuts import render, redirect
+from django.views import View
+from .forms import LoginForm
+
+class LoginView(View):
+    template_name = 'login.html'
+
+    def get(self, request):
+        form = LoginForm()
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request):
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(request, username=username, password=password)
+
+            if user is not None:
+                login(request, user)
+                return redirect('/inicio')  # Redirige al usuario después del inicio de sesión exitoso
+            else:
+                # Mensaje de error si la autenticación falla
+                form.add_error(None, 'Usuario o contraseña incorrectos')
+
+        return render(request, self.template_name, {'form': form})
+
 
 # Create your views here.
 class Home(APIView):
@@ -17,6 +45,21 @@ class Home(APIView):
     
 class Inicio(APIView):
     template_name = 'inicio.html'
+    def get(self, request):
+        return render(request, self.template_name) 
+    
+class Perfil(APIView):
+    template_name = 'perfil.html'
+    def get(self, request):
+        return render(request, self.template_name) 
+    
+class Geografia(APIView):
+    template_name = 'Geografia.html'
+    def get(self, request):
+        return render(request, self.template_name) 
+    
+class Matematicas(APIView):
+    template_name = 'Matematicas.html'
     def get(self, request):
         return render(request, self.template_name) 
 
