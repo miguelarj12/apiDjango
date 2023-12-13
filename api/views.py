@@ -63,6 +63,31 @@ class Matematicas(APIView):
     def get(self, request):
         return render(request, self.template_name) 
 
+class Biologia(APIView):
+    template_name = 'Biologia.html'
+    def get(self, request):
+        return render(request, self.template_name)
+    
+class CuestionarioGe(APIView):
+    template_name = 'CuestionarioGe.html'
+    def get(self, request):
+        return render(request, self.template_name)
+    
+class Mexico(APIView):
+    template_name = 'Mexico.html'
+    def get(self, request):
+        return render(request, self.template_name)
+    
+class America(APIView):
+    template_name = 'America.html'
+    def get(self, request):
+        return render(request, self.template_name)
+
+class Continentes(APIView):
+    template_name = 'Continentes.html'
+    def get(self, request):
+        return render(request, self.template_name)
+
 class Registro(APIView):    
     def post(self, request):
         data = request.data

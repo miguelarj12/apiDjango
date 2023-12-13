@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from api.views import Home, Inicio, Registro, Perfil, LoginView, Matematicas, Geografia
+from api.views import Home, Inicio, Registro, Perfil, Continentes, America, LoginView, Biologia, Mexico, CuestionarioGe, Matematicas, Geografia
 from api import views
 
 urlpatterns = [
@@ -28,6 +28,11 @@ urlpatterns = [
     path('perfil/', Perfil.as_view(), name='perfil'),
     path('Geografia/', Geografia.as_view(), name='Geografia'),
     path('Matematicas/', Matematicas.as_view(), name='Matematicas'),
+    path('Biologia/', Biologia.as_view(), name='Biologia'),
+    path('Mexico/', Mexico.as_view(), name='Mexico'),
+    path('America/', America.as_view(), name='America'),
+    path('Continentes/', Continentes.as_view(), name='Continentes'),
+    path('CuestionarioGe/', CuestionarioGe.as_view(), name='CuestionarioGe'),
     path('login/', LoginView.as_view(), name='login'),
 ]
 
