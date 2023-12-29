@@ -73,6 +73,26 @@ class CuestionarioGe(APIView):
     def get(self, request):
         return render(request, self.template_name)
     
+class CuestionarioMa(APIView):
+    template_name = 'CuestionarioMa.html'
+    def get(self, request):
+        return render(request, self.template_name)
+
+class Suma(APIView):
+    template_name = 'Suma.html'
+    def get(self, request):
+        return render(request, self.template_name)
+
+class Resta(APIView):
+    template_name = 'Resta.html'
+    def get(self, request):
+        return render(request, self.template_name)
+    
+class Multiplicacion(APIView):
+    template_name = 'Multiplicacion.html'
+    def get(self, request):
+        return render(request, self.template_name)
+    
 class Mexico(APIView):
     template_name = 'Mexico.html'
     def get(self, request):

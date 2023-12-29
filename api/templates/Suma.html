@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>Suma</title>
+</head>
+<body style="background-color: #fee5ad;">
+    <div >
+        <nav class="navbar navbar-dark bg-primary navbar-expand-lg justify-content-between">
+            <a class="navbar-brand bold font-size">EstudiBot</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/inicio">Inicio</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="https://matbot-vg95.onrender.com">Asistente</a>
+              </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/Matematicas">Temas</a>
+              </li>
+              </ul>
+              <form class="form-inline">
+                <input class="form-control mr-sm-1" type="search" placeholder="Buscar" aria-label="Search">
+                    <a href="/" class="btn btn-danger float-end">Salir</a>
+              </form>
+            </div>
+        </nav>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <p style="display: flex; justify-content: center; align-items: center; font-size: 34px;">Suma</p>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <div style="width: 1000px;">
+                <h2 style="font-size: 20px;">La suma o adición es una de las cuatro operaciones básicas de la aritmética que consiste en la adición
+                    de dos o más elementos para llegar a un resultado final donde todo se incluye.</h2>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: center; align.items: center; margin: 20px;">
+            <img src="https://www.mathematicsdictionary.com/spanish/vmd/images/a/addition.gif" style="border-radius: 20px;">
+        </div>
+
+        <div style="display: flex; justify-content: center; align-items: center; margin: 20px;">
+            <div style="width: 1000px;">
+                <h2 style="font-size: 20px;">El símbolo de la suma es el símbolo más (+) y se intercala entre los elementos que se quiere sumar como, por ejemplo: 2+3=5.</h2>
+            </div>
+        </div>
+
+
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <div style="width: 1000px;">
+                <h2 style="font-size: 20px;">La suma puede ser de cualquier elemento tanto de números naturales, enteros, decimales, fracciones, reales y complejos o expresiones algebraicas.</h2>
+            </div>
+        </div>
+        
+        <div style="display: flex; justify-content: center; align-items: center;">
+       <div style="background-color: white; width: 700px; border-radius: 50px;">
+            <h1 style="display: flex; justify-content: center; align-items: center; margin: 20px;">Selecciona el resultado correcto</h1>
+            <div style="width: 100%; display: flex; max-width: 100%; margin-top: 20px; margin-left: auto; margin-right: auto; padding: 20px;">
+                <div style="width: 70%; font-size: 80px; display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                    <div>
+                         <span id="suma">9 + 9 =</span>
+                         <span id="resultado"> ?</span>
+                     </div>
+                     <span style="font-size: 40px; height: 50px;" id="msj">
+                             
+                     </span>
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; center; flex-direction: column;">
+                    <span id="op1" style="width: 80px; height: 80px;  font-size: 50px; margin-bottom: 20px; border-radius: 10%; cursor: pointer; background-color: white; color: black; play: flex; justify-content: center; align-items: center;" onclick="controlarRespuesta(this)">18</span>
+                    <span id="op2" style="width: 80px; height: 80px;  font-size: 50px; margin-bottom: 20px; border-radius: 10%; cursor: pointer; background-color: white; color: black; play: flex; justify-content: center; align-items: center;" onclick="controlarRespuesta(this)">17</span>
+                    <span id="op3" style="width: 80px; height: 80px;  font-size: 50px; margin-bottom: 20px; border-radius: 10%; cursor: pointer; background-color: white; color: black; play: flex; justify-content: center; align-items: center;" onclick="controlarRespuesta(this)">8</span>
+                </div>
+            </div>
+            <script src="{% static './js/juegosuma.js' %}"></script>
+        </div>
+    </div>
+
+    </div>
+
+    <div style="display:flex; justify-content: center; align-items: center; margin: 1rem;" >
+        <a href="/Matematicas" style="width: 100px;  display:flex; justify-content: center; align-items: center;border-radius: 15px; background-color: blue; border: none; color: white;"> Regresar </a>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
