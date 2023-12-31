@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from api.views import Home, Inicio, Registro, Perfil, Continentes, America, LoginView, Biologia, Mexico, CuestionarioGe, CuestionarioMa, Matematicas, Suma, Resta, Multiplicacion, Geografia
+from api.views import Home, Celula, Animales, Ecosistema, Inicio, Registro, Perfil, Continentes, CuestionarioBi,  America, LoginView, Biologia, Mexico, Editar, Eliminar, CuestionarioGe, CuestionarioMa, Matematicas, Suma, Resta, Multiplicacion, Geografia
 from api import views
 
 urlpatterns = [
@@ -23,6 +23,8 @@ urlpatterns = [
     path('', Home.as_view(), name='index'),
     path('inicio/', Inicio.as_view(), name='inicio'),
     path('registro/', Registro.as_view(), name='registro'),
+    path('editar/', Editar.as_view(), name='editar'),
+    path('eliminar/', Eliminar.as_view(), name='eliminar'),
     path('report/', views.report, name='report'),
     path('get_respuesta/', views.get_respuesta, name='get_respuesta'),
     path('perfil/', Perfil.as_view(), name='perfil'),
@@ -35,8 +37,12 @@ urlpatterns = [
     path('CuestionarioGe/', CuestionarioGe.as_view(), name='CuestionarioGe'),
     path('login/', LoginView.as_view(), name='login'),
     path('CuestionarioMa/', CuestionarioMa.as_view(), name='CuestionarioMa'),
+    path('CuestionarioBi/', CuestionarioBi.as_view(), name='CuestionarioBi'),
     path('Suma/', Suma.as_view(), name='Suma'),
     path('Resta/', Resta.as_view(), name='Resta'),
     path('Multiplicacion/', Multiplicacion.as_view(), name='Multiplicacion'),
+    path('Celula/', Celula.as_view(), name='Celula'),
+    path('Animales/', Animales.as_view(), name='Animales'),
+    path('Ecosistema/', Ecosistema.as_view(), name='Ecosistema'),
 ]
 

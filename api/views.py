@@ -78,6 +78,11 @@ class CuestionarioMa(APIView):
     def get(self, request):
         return render(request, self.template_name)
 
+class CuestionarioBi(APIView):
+    template_name = 'CuestionarioBi.html'
+    def get(self, request):
+        return render(request, self.template_name)
+
 class Suma(APIView):
     template_name = 'Suma.html'
     def get(self, request):
@@ -105,6 +110,31 @@ class America(APIView):
 
 class Continentes(APIView):
     template_name = 'Continentes.html'
+    def get(self, request):
+        return render(request, self.template_name)
+
+class Celula(APIView):
+    template_name = 'Celula.html'
+    def get(self, request):
+        return render(request, self.template_name)
+
+class Animales(APIView):
+    template_name = 'Animales.html'
+    def get(self, request):
+        return render(request, self.template_name)
+
+class Ecosistema(APIView):
+    template_name = 'Ecosistema.html'
+    def get(self, request):
+        return render(request, self.template_name)
+
+class Editar(APIView):
+    template_name = 'editar.html'
+    def get(self, request):
+        return render(request, self.template_name)
+    
+class Eliminar(APIView):
+    template_name = 'eliminar.html'
     def get(self, request):
         return render(request, self.template_name)
 
